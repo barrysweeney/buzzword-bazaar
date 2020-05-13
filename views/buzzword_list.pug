@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  
+  ul
+    each buzzword in buzzword_list
+      li 
+        a(href=buzzword.url) #{buzzword.name} 
+
+    else
+      li There are no buzzwords in stock.

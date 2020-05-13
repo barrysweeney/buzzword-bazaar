@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1  #{buzzword.name}
+  
+  p #[strong Description:] #{buzzword.description}
+  p #[strong Price:] #{buzzword.price}
+  p #[strong Quantity Available:] #{buzzword.numberInStock}
+  p #[strong Category:]&nbsp;
+    each val, index in buzzword.category
+      a(href=val.url) #{val.name}
+      if index < buzzword.category.length - 1
+        |, 
+
+  if hasImg
+    img(src=buzzword.buzzwordImage)
+
+  hr
+  p
+    a(href=buzzword.url+'/delete') Delete Buzzword
+  p
+    a(href=buzzword.url+'/update') Update Buzzword
+        

@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to the Buzzword Bazaar.
+
+  h1 In the inventory
+
+  if error
+    p There's a problem with our inventory, please come back later.
+  else
+    p We have #{data.buzzword_count} buzzwords for sale across #{data.category_count} different categories.
