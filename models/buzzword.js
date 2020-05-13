@@ -18,6 +18,7 @@ BuzzwordSchema.virtual("url").get(function () {
 });
 
 // Virtual for src of buzzword img
+// technique adapted from this article: https://medium.com/@koteswar.meesala/convert-array-buffer-to-base64-string-to-display-images-in-angular-7-4c443db242cd
 BuzzwordSchema.virtual("buzzwordImage").get(function () {
   const TYPED_ARRAY = new Uint8Array(this.img.data);
   if (TYPED_ARRAY.length > 0) {

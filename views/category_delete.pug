@@ -22,6 +22,6 @@ block content
     
     form(method='POST' action='')
       div.form-group
-        input#categoryid.form-control(type='hidden',name='categoryid', required='true', value=category._id )
+        input#categoryid(type='hidden',name='categoryid', required='true', value=category._id )
 
-      button.btn.btn-primary(type='submit') Delete
+      button(type='submit') Delete
